@@ -30,9 +30,10 @@ class Header extends Component{
     return(
       <nav>
         <div className = "nav-wrapper">
-        <Link to ="/" className = "brand-logo left" >
-          Home
-        </Link>
+          <ul className = "left">
+            <li><Link to ="/"  >Home</Link></li>
+            <li><Link to="/about">About us </Link> </li>
+          </ul>
           <ul className = "right">
           {this.renderButtons()}
           </ul>

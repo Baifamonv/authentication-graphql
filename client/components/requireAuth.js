@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
 import currentUserQuery from '../query/CurrentUser';
 import {hashHistory} from 'react-router';
+import SongList from './SongList';
 
 export default (WrappedComponent) => {
   class RequireAuth extends Component {
@@ -13,7 +14,12 @@ export default (WrappedComponent) => {
     }
 
     render(){
-      return <WrappedComponent {...this.props} />;
+      return (
+        <div className = "container">
+        <WrappedComponent {...this.props} />
+        <SongList />
+      </div>
+      );
     }
   }
   return graphql(currentUserQuery)(RequireAuth);
