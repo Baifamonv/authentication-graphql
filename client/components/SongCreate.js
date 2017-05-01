@@ -25,9 +25,9 @@ class SongCreate extends Component{
       <Link to="/">
       Back to list
       </Link>
-      <h3>Create a new Song</h3>
+      <h3>增添新小说</h3>
         <form onSubmit = {this.onSubmit.bind(this)}>
-          <label>Song Title :</label>
+          <label>小说题目 :</label>
           <input onChange = {event => this.setState ({title:event.target.value})}
           value = {this.state.title}
           />
