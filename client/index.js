@@ -1,5 +1,5 @@
 import React from 'react';
-//import './style/style.css';
+
 import ReactDOM from 'react-dom';
 import ApolloClient, {createNetworkInterface} from 'apollo-client';
 import { ApolloProvider } from 'react-apollo';
@@ -16,6 +16,7 @@ import SongDetails from './components/SongDetails';
 import SongList from './components/SongList';
 import About from './components/About';
 import GeneralSongList from './components/GeneralSongList';
+import GeneralSongDetails from './components/GeneralSongDetails';
 // network interface, send cookies to make query to the server
 const networkInterface = createNetworkInterface({
   uri:'./graphql',
@@ -43,7 +44,8 @@ const Root = () => {
         <Route path ="about" component ={About} />
         <IndexRoute component ={GeneralSongList} />
         <Route path ="songs/new" component ={SongCreate} />
-        <Route path ="songs/:id" component ={SongDetails} />
+        <Route path ="songs/:id" component ={SongDetails}/>
+
       </Route>
     </Router>
   </ApolloProvider>

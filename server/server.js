@@ -46,7 +46,7 @@ app.use(session({
 // assign the current user to the 'req.user' object.  See also servces/auth.js
 app.use(passport.initialize());
 app.use(passport.session());
-
+app.use(bodyParser.json());
 // Instruct Express to pass on any request made to the '/graphql' route
 // to the GraphQL instance.
 app.use('/graphql', expressGraphQL({

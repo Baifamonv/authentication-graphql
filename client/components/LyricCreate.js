@@ -24,7 +24,7 @@ class LyricCreate extends Component{
 
       <form onSubmit = {this.onSubmit.bind(this)}>
         <p>{ this.state.content}</p>
-      <label>Add Another Chaper</label>
+      <label>Add Another Chapter</label>
          <input value = { this.state.content} onChange ={event => this.setState({ content:event.target.value})} />
      </form>
    );

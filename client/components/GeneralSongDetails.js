@@ -12,7 +12,7 @@ class SongDetails extends Component{
     if(!song){return <div>Loading</div>;}
     return(
       <div>
-      <Link to="dashboard">back</Link>
+      <Link to="/">back</Link>
         <h3>{song.title}</h3>
         <LyricList lyrics = {song.lyrics} />
       </div>

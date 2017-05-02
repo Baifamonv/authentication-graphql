@@ -11,6 +11,7 @@ class Header extends Component{
     });
   }
   renderButtons(){
+
     const { loading,user } = this.props.data;
     if(loading){ return <div />;}
     if(user){
@@ -27,11 +28,12 @@ class Header extends Component{
     }
   }
   render(){
+  
     return(
       <nav>
         <div className = "nav-wrapper">
           <ul className = "left">
-            <li><Link to ="/"  >Home</Link></li>
+            <li><Link to ="/" >Home</Link></li>
             <li><Link to="/about">About us </Link> </li>
           </ul>
           <ul className = "right">

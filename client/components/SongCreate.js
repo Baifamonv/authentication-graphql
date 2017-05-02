@@ -17,12 +17,12 @@ class SongCreate extends Component{
   this.props.mutate({
     variables:{title:this.state.title},
     refetchQueries:[{query:query}]
-  }).then(() => hashHistory.push('/'));// after state has change, push to the index page
+  }).then(() => hashHistory.push('/dashboard'));// after state has change, push to the index page
   }
   render(){
     return (
       <div>
-      <Link to="/">
+      <Link to="dashboard">
       Back to list
       </Link>
       <h3>增添新小说</h3>
